@@ -1,0 +1,10 @@
+CompileFlags:
+    Add:
+        - -Id:\programs\gcc_arm\arm-none-eabi\include\c++\10.2.1
+        - -Id:\programs\gcc_arm\arm-none-eabi\include\c++\10.2.1\arm-none-eabi\thumb\v7e-m\nofp
+        - -Id:\programs\gcc_arm\arm-none-eabi\include\c++\10.2.1\backward
+        - -Id:\programs\gcc_arm\lib\gcc\arm-none-eabi\10.2.1\include
+        - -Id:\programs\gcc_arm\lib\gcc\arm-none-eabi\10.2.1\include-fixed
+        - -Id:\programs\gcc_arm\arm-none-eabi\include
+    CompilationDatabase: ./build/Debug
+    Compiler: D:\Programs\gcc_arm\bin\arm-none-eabi-g++.exe

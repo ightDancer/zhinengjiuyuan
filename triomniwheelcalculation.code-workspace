@@ -24,7 +24,13 @@
             "editor.insertSpaces": true,
             "editor.tabSize": 4,
             "editor.autoIndent": "advanced"
-        }
+        },
+        "cSpell.words": [
+            "Autoreload",
+            "GPIOB",
+            "GPIOE",
+            "htim"
+        ]
     },
     "extensions": {
         "recommendations": [
