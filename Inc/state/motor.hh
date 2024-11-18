@@ -43,6 +43,24 @@ namespace RescueRobot
             return encoder_.getSpeed(conf_.tim_handle);
         }
 
+        void setPWM(float pwm)
+        {
+            if (pwm >= 0) {
+                HAL_GPIO_WritePin(conf_.port, conf_.pin_1, GPIO_PIN_RESET);
+                HAL_GPIO_WritePin(conf_.port, conf_.pin_2, GPIO_PIN_SET);
+                __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, pwm);
+            } else {
+                HAL_GPIO_WritePin(conf_.port, conf_.pin_1, GPIO_PIN_SET);
+                HAL_GPIO_WritePin(conf_.port, conf_.pin_2, GPIO_PIN_RESET);
+                __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, -pwm);
+            }
+        }
+
+        void setPWM()
+        {
+            setPWM(pid_.output);
+        }
+
         Encoder encoder_;
         MotorConf conf_;
         CascadePID pid_;
